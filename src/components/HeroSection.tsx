@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import NetworkBackground from "./NetworkBackground";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -8,11 +7,6 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden pt-20">
-      {/* Animated network background */}
-      <NetworkBackground />
-      
-      {/* Subtle overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20"></div>
       
       <div className="container mx-auto px-6 text-center text-white relative z-10">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
