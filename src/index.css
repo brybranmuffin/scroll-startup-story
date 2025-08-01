@@ -2,14 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Startup Landing Page Design System */
 
 @layer base {
   :root {
+    /* Core theme colors */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
+    
+    /* Brand colors - modern startup theme */
+    --primary: 240 100% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 95% 85%;
+    --secondary-foreground: 240 100% 15%;
+    
+    /* Accent colors */
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(240, 100%, 65%), hsl(280, 100%, 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(240, 100%, 65%) 0%, hsl(280, 100%, 70%) 50%, hsl(320, 100%, 75%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(240, 100%, 98%) 0%, hsl(0, 0%, 100%) 100%);
+    
+    /* Shadows and effects */
+    --shadow-glow: 0 0 40px hsl(240, 100%, 65%, 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(240, 100%, 65%, 0.1);
+    --shadow-elevated: 0 20px 40px -15px hsl(240, 100%, 65%, 0.15);
+    
+    /* Animation timing */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bouncy: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -17,17 +40,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
